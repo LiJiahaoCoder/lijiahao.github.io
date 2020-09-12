@@ -1,0 +1,29 @@
+// commen color
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #ddd;
+$color-dark-gray: #333;
+
+// task bar style
+$task-bar-main-blue: rgb(49, 96, 212);
+$task-bar-light-blue: rgb(59, 134, 219);
+$task-bar-dark-blue: rgb(45, 90, 205);
+$task-area-main-blue: rgb(70, 155, 230);
+$task-area-light-blue: rgb(100, 200, 230);
+$task-area-dark-blue: $task-bar-light-blue;
+$task-area-border-color: rgb(50, 95, 175);
+$windows-button-light-green-background: rgb(75, 150, 55);
+$windows-button-lighter-green-background: rgb(75, 200, 55);
+$windows-button-dark-green-background: rgb(50, 110, 40);
+$windows-button-shadow-color: rgb(60, 60, 60);
+
+// turn on style
+$turn-on-index: 999;
+$turn-on-dark-blue: rgb(89, 126, 226);
+$turn-on-light-blue: rgb(127, 167, 249);
+
+// window style
+$window-bar-blur-background: rgb(127, 151, 218);
+$window-minimize-icon-blur-background: rgb(86, 122, 225);
+$window-maximize-icon-blur-background: rgb(86, 122, 225);
+$window-close-icon-blur-background: rgb(164, 107, 120);

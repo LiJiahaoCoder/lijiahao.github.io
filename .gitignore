@@ -1,0 +1,17 @@
+# node packages
+node_modules
+
+# build files
+dist
+build
+.cache
+
+# yarn error log
+yarn-error.log
+
+# deploy files
+nginx.conf
+Dockerfile
+
+# IDE
+.idea

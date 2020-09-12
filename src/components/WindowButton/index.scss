@@ -1,0 +1,32 @@
+@import "../../style/variables.scss";
+
+.windows-button {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: $color-white;
+  text-align: center;
+  margin-right: 16px;
+  border-radius: 0 15px 20px 0;
+  -webkit-border-radius: 0 15px 20px 0;
+  -moz-border-radius: 0 15px 20px 0;
+  -ms-border-radius: 0 15px 20px 0;
+  -o-border-radius: 0 15px 20px 0;
+  box-shadow: inset 0px 0px 10px 0px $windows-button-shadow-color;
+  background: radial-gradient($windows-button-light-green-background, $windows-button-dark-green-background);
+  &:hover {
+    cursor: pointer;
+    background: radial-gradient($windows-button-lighter-green-background, $windows-button-light-green-background);
+  }
+  .windows-icon {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    margin-left: -13px;
+  }
+  .windows-text {
+    user-select: none;
+  }
+}
