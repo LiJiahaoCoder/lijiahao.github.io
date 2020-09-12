@@ -5,6 +5,7 @@
     "module": "commonjs",
     "allowJs": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["DOM"],
     "jsx": "react",
     "declaration": true,
     "removeComments": false,
@@ -12,7 +13,7 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "typeRoots": [
-      "node_modules/@types",
+      "node_modules/@types"
     ],
     "paths": {
       "~/*": ["./*"]

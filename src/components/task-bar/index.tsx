@@ -13,13 +13,13 @@ export default function TaskBar () {
   useEffect(() => {
     setTime(getCurrentTime());
 
-    const id = window.setInterval(() => {
+    const id = setInterval(() => {
       setTime(getCurrentTime());
     }, 1000);
     setTimer(id);
 
     return function clear () {
-      window.clearInterval(timer);
+      clearInterval(timer);
     };
   }, []);
 

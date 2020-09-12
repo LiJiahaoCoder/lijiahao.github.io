@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './index.scss';
 
-const BlueBorder = () => <div className={styles['turn-on-border']}></div>;
+const BlueBorder = () => <div className={styles['turn-on-border']} />;
 const TurnOnInterface = () => <div className={styles['turn-on-container']}>
     <BlueBorder />
     <div className={styles['turn-on-content']}>
