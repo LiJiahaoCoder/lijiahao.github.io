@@ -1,0 +1,1 @@
+import './forbid-context-menu';
