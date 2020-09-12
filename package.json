@@ -5,7 +5,7 @@
   "main": "./index.tsx",
   "homepage": "lijiahao.github.io",
   "scripts": {
-    "clean": "rm -rf dist/ .cache/",
+    "clean": "rm -rf dist/ .cache/ build/",
     "start": "yarn clean && parcel src/index.html",
     "build": "yarn clean && parcel build --no-source-maps src/index.html --public-url ./ --out-dir build/ && cp CNAME ./build",
     "lint": "tslint --config tslint.json 'src/**/*.ts(x)?'",
