@@ -2,8 +2,8 @@
 
 .windows-panel-container {
   position: absolute;
-  top: -40px;
-  height: 40px;
+  top: -$task-bar-height;
+  height: $task-bar-height;
   width: 120px;
   border-width: 1px 1px 0px;
   border-style: solid;

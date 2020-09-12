@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { WindowsXpIcon } from '../../assets/icons';
-import WindowsPanel from '../WindowsPanel';
+import WindowsPanel from '../windows-panel';
 import styles from './index.scss';
 
 const WindowsButtonIds: string[] = [

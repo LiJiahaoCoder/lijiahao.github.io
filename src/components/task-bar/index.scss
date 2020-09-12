@@ -9,7 +9,7 @@
   bottom: 0;
   width: 100%;
   min-width: 640px;
-  height: 40px;
+  height: $task-bar-height;
   display: flex;
   align-items: center;
   background: task-bar-gradient($task-bar-light-blue, $task-bar-dark-blue, $task-bar-main-blue);

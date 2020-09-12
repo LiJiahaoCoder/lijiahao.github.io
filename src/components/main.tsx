@@ -1,6 +1,6 @@
 import React from 'react';
-import Background from './Background';
-import TaskBar from './TaskBar';
+import Background from './background';
+import TaskBar from './task-bar';
 
 export default function Main () {
   return <>

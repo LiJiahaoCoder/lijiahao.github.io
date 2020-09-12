@@ -1,6 +1,6 @@
 import React from 'react';
-import TurnOn from './components/TurnOn';
 import Main from './components/main';
+import TurnOn from './components/turn-on';
 
 export default function App () {
   return <>
