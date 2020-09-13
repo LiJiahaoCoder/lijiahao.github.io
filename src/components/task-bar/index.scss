@@ -1,4 +1,4 @@
-@import "../../style/variables.scss";
+@import "src/style/variables.scss";
 
 @function task-bar-gradient($top-color, $middle-color, $bottom-color) {
   @return linear-gradient($top-color, 10%, $middle-color, 40%, $bottom-color);

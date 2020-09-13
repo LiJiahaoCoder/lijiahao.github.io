@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import WindowButton from '../window-button';
+import WindowButton from '~/components/window-button';
 import styles from './index.scss';
 
 export default function TaskBar () {

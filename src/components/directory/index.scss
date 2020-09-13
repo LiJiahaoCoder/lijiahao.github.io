@@ -1,0 +1,21 @@
+@import "src/style/variables";
+@import "src/style/mixins";
+
+.directory-wrapper {
+  width: 80px;
+  text-align: center;
+
+  .icon {
+    width: 48px;
+  }
+
+  .directory-name {
+    width: 100%;
+    color: $color-white;
+    font-size: 12px;
+    font-weight: lighter;
+    text-shadow: 1px 1px $color-black;
+    letter-spacing: 1px;
+    @include ellipsis;
+  }
+}

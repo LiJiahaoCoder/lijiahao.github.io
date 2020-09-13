@@ -5,7 +5,7 @@
     "module": "commonjs",
     "allowJs": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["DOM"],
+    "types": ["dom"],
     "jsx": "react",
     "declaration": true,
     "removeComments": false,

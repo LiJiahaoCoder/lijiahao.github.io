@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Reload } from '../../assets/icons';
+import { Reload } from '~/assets/icons';
 import styles from './index.scss';
 
 interface IProps {
