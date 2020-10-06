@@ -9,13 +9,18 @@ interface IProps {
 export default function WindowsPanel ({ hidden }: IProps) {
   const [panelClassname, setPanelClassname] = useState(styles['windows-panel-container']);
 
-  function handleReload () {
+  const handleReload = () => {
     location.reload();
-  }
+  };
 
   useEffect(() => {
     const hiddenClassname = hidden ? styles.hidden : '';
-    setPanelClassname([styles['windows-panel-container'], hiddenClassname].join(' '));
+    setPanelClassname(
+      [
+        styles['windows-panel-container'],
+        hiddenClassname,
+      ].join(' '),
+    );
   }, [hidden]);
 
   return <div className={panelClassname}>

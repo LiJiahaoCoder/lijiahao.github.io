@@ -6,9 +6,9 @@ export default function TaskBar () {
   const [time, setTime] = useState<string>('');
   const [timer, setTimer] = useState<number>(0);
 
-  function getCurrentTime (): string {
+  const getCurrentTime = (): string => {
     return new Date().toLocaleString().split(', ')[1];
-  }
+  };
 
   useEffect(() => {
     setTime(getCurrentTime());

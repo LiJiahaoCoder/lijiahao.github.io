@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { WindowsXpIcon } from '~/assets/icons';
 import WindowsPanel from '~/components/windows-panel';
+
 import styles from './index.scss';
 
-const WindowsButtonIds: string[] = [
-  'windows-button',
-  'windows-icon',
-  'windows-text',
-];
+const WINDOWS_BUTTON = 'windows-button';
+const WINDOWS_ICON = 'windows-icon';
+const WINDOWS_TEXT = 'windows-text';
+const WindowsButtonIds: string[] = [ WINDOWS_BUTTON, WINDOWS_ICON, WINDOWS_TEXT ];
 
 export default function WindowButton () {
   let WindowsButtonElements: Array<HTMLElement | EventTarget | null> = [];
   const [hidden, setHidden] = useState(true);
 
-  function hiddenWindowsPanel ({ target }: MouseEvent) {
+  const hiddenWindowsPanel = ({ target }: MouseEvent) => {
     if (!WindowsButtonElements.includes(target)) {
       setHidden(true);
     }
-  }
+  };
 
-  function handleHidePanel () {
+  const handleClickWindowsButton = () => {
     setHidden((value) => !value);
-  }
+  };
 
   useEffect(() => {
     WindowsButtonElements = WindowsButtonIds.map((id) => document.getElementById(id));
 
-    addEventListener('click', hiddenWindowsPanel);
+    document.addEventListener('click', hiddenWindowsPanel);
 
     return function clear () {
       document.removeEventListener('click', hiddenWindowsPanel);
@@ -35,22 +35,29 @@ export default function WindowButton () {
 
   return <>
     <WindowsPanel hidden={hidden} />
-    <section
-      id='windows-button'
-      className={styles['windows-button']}
-      onClick={handleHidePanel}
-    >
-      <img
-        id='windows-icon'
-        className={styles['windows-icon']}
-        src={WindowsXpIcon}
-      />
-      <i
-        id='windows-text'
-        className={styles['windows-text']}
+    <div className={styles['windows-button-wrapper']}>
+      <section
+        id={WINDOWS_BUTTON}
+        className={`${styles['windows-button']} ${styles['windows-hovered-button']}`}
       >
-        开始
-      </i>
-    </section>
+        <img
+          id={WINDOWS_ICON}
+          className={styles['windows-icon']}
+          src={WindowsXpIcon}
+        />
+        <i id={WINDOWS_TEXT} className={styles['windows-text']}>开始</i>
+      </section>
+      <section
+        id={WINDOWS_BUTTON}
+        className={`${styles['windows-button']} ${styles['windows-unhovered-button']}`}
+      >
+        <img
+          id={WINDOWS_ICON}
+          className={styles['windows-icon']}
+          src={WindowsXpIcon}
+        />
+        <i id={WINDOWS_TEXT} className={styles['windows-text']}>开始</i>
+      </section>
+    </div>
   </>;
 }

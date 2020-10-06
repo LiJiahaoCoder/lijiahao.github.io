@@ -8,8 +8,9 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  min-width: 640px;
+  min-width: $min-width;
   height: $task-bar-height;
+  padding-left: 136px;
   display: flex;
   align-items: center;
   background: task-bar-gradient($task-bar-light-blue, $task-bar-dark-blue, $task-bar-main-blue);
@@ -17,11 +18,10 @@
     user-select: none;
     position: absolute;
     right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 120px;
-    height: 100%;
+    height: $task-bar-height;
+    line-height: $task-bar-height;
+    text-align: center;
     color: $color-white;
     font-size: 14px;
     font-family: monospace;

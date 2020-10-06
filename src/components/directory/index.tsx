@@ -1,35 +1,61 @@
-import React, { useState, MouseEvent } from 'react';
-import { Directory as DirectoryIcon, DirectorySelected as DirectorySelectedIcon } from '~/assets/icons';
+import React, { useEffect, useState, MouseEvent as ReactMouseEvent } from 'react';
+import {
+  Directory as DirectoryIcon,
+  DirectorySelected as DirectorySelectedIcon,
+} from '~/assets/icons';
 
 import styles from './index.scss';
+
+const DIRECTORY = 'directory';
+const DIRECTORY_ICON = 'directory-icon';
+const DIRECTORY_NAME = 'directory-name';
+const DirectoryButtonIds: string[] = [ DIRECTORY, DIRECTORY_ICON, DIRECTORY_NAME ];
 
 interface IProps {
   name: string;
 }
 
 export default function Directory ({ name }: IProps) {
+  let DirectoryElements: Array<HTMLElement | EventTarget | null> = [];
   const [selectedClass, setSelectedClass] = useState('');
 
-  const handleClickDirectory = (e: MouseEvent) => {
+  const handleClickDirectory = (e: ReactMouseEvent) => {
     e.stopPropagation();
     setSelectedClass('selected');
   };
 
-  const handleDoubleClickDirectory = (e: MouseEvent) => {
+  const handleDoubleClickDirectory = (e: ReactMouseEvent) => {
     e.stopPropagation();
     setSelectedClass('');
   };
 
+  const handleUnselecteDirectory = ({ target }: MouseEvent) => {
+    if (!DirectoryElements.includes(target)) {
+      setSelectedClass('');
+    }
+  };
+
+  useEffect(() => {
+    DirectoryElements = DirectoryButtonIds.map((id) => document.getElementById(id));
+
+    document.addEventListener('click', handleUnselecteDirectory);
+
+    return function clear () {
+      document.removeEventListener('click', handleUnselecteDirectory);
+    };
+  }, []);
+
   return <div
+    id={DIRECTORY}
     onClick={handleClickDirectory}
     onDoubleClick={handleDoubleClickDirectory}
     className={`${styles['directory-wrapper']} ${styles[selectedClass]}`}
   >
     <img
+      id={DIRECTORY_ICON}
       className={styles.icon}
       src={ selectedClass ? DirectorySelectedIcon : DirectoryIcon}
-      alt='哦豁，出错了！'
     />
-    <div className={styles['directory-name']}>{name}</div>
+    <div id={DIRECTORY_NAME} className={styles['directory-name']}>{ name }</div>
   </div>;
 }

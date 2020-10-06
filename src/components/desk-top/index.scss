@@ -1,8 +1,18 @@
+@import "src/style/variables";
+
 .desk-top {
+  min-width: $min-width;
+  min-height: $min-height;
   padding: 16px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
   height: calc(100vh - 72px); // 100vh - tab-bar - padding
+
+  &.background {
+    background-image: url('../../assets/images/windows-xp-default-wallpaper.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 }
