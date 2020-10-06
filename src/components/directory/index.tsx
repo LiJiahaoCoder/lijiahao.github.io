@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Directory as DirectoryIcon } from '~/assets/icons';
+import React, { useState, MouseEvent } from 'react';
+import { Directory as DirectoryIcon, DirectorySelected as DirectorySelectedIcon } from '~/assets/icons';
 
 import styles from './index.scss';
 
@@ -10,12 +10,14 @@ interface IProps {
 export default function Directory ({ name }: IProps) {
   const [selectedClass, setSelectedClass] = useState('');
 
-  const handleClickDirectory = () => {
+  const handleClickDirectory = (e: MouseEvent) => {
+    e.stopPropagation();
     setSelectedClass('selected');
   };
 
-  const handleDoubleClickDirectory = () => {
-    console.info('Double');
+  const handleDoubleClickDirectory = (e: MouseEvent) => {
+    e.stopPropagation();
+    setSelectedClass('');
   };
 
   return <div
@@ -23,7 +25,11 @@ export default function Directory ({ name }: IProps) {
     onDoubleClick={handleDoubleClickDirectory}
     className={`${styles['directory-wrapper']} ${styles[selectedClass]}`}
   >
-    <img className={styles.icon} src={DirectoryIcon}  alt='哦豁，出错了！'/>
+    <img
+      className={styles.icon}
+      src={ selectedClass ? DirectorySelectedIcon : DirectoryIcon}
+      alt='哦豁，出错了！'
+    />
     <div className={styles['directory-name']}>{name}</div>
   </div>;
 }

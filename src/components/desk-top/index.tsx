@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import Directory from '~/components/directory';
 
 import styles from './index.scss';

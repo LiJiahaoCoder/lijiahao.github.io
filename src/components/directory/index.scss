@@ -4,6 +4,13 @@
 .directory-wrapper {
   width: 80px;
   text-align: center;
+  margin: 0 16px 16px 0;
+
+  &.selected {
+    .directory-name {
+      background-color: rgb(115, 100, 255);
+    }
+  }
 
   .icon {
     width: 48px;
@@ -16,6 +23,8 @@
     font-weight: lighter;
     text-shadow: 1px 1px $color-black;
     letter-spacing: 1px;
+    cursor: default;
+    user-select: none;
     @include ellipsis;
   }
 }
