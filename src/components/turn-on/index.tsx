@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './index.scss';
 
-const BlueBorder = () => <div className={styles['turn-on-border']} />;
-const TurnOnInterface = () => <div className={styles['turn-on-container']}>
+const BlueBorder = () => <div className={styles.turnOnBorder} />;
+const TurnOnInterface = () => <div className={styles.turnOnContainer}>
     <BlueBorder />
-    <div className={styles['turn-on-content']}>
-      <span className={styles['welcome-text']}>欢迎使用</span>
+    <div className={styles.turnOnContent}>
+      <span className={styles.welcomeText}>欢迎使用</span>
     </div>
     <BlueBorder />
   </div>;

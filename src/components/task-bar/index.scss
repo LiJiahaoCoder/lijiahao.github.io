@@ -1,10 +1,10 @@
 @import "src/style/variables.scss";
 
-@function task-bar-gradient($top-color, $middle-color, $bottom-color) {
+@function taskBarGradient($top-color, $middle-color, $bottom-color) {
   @return linear-gradient($top-color, 10%, $middle-color, 40%, $bottom-color);
 }
 
-.task-bar-container {
+.taskBarContainer {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -13,11 +13,12 @@
   padding-left: 136px;
   display: flex;
   align-items: center;
-  background: task-bar-gradient($task-bar-light-blue, $task-bar-dark-blue, $task-bar-main-blue);
-  .task-area {
+  background: taskBarGradient($task-bar-light-blue, $task-bar-dark-blue, $task-bar-main-blue);
+
+  .taskArea {
     user-select: none;
     position: absolute;
-    right: 0;
+    right: 134px;
     width: 120px;
     height: $task-bar-height;
     line-height: $task-bar-height;
@@ -25,7 +26,7 @@
     color: $color-white;
     font-size: 14px;
     font-family: monospace;
-    background: task-bar-gradient($task-area-light-blue, $task-area-dark-blue, $task-area-main-blue);
+    background: taskBarGradient($task-area-light-blue, $task-area-dark-blue, $task-area-main-blue);
     box-shadow: -1px 2px 2px 0px $task-area-border-color;
   }
 }

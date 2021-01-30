@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import WindowButton from '~/components/window-button';
+
 import styles from './index.scss';
 
 export default function TaskBar () {
@@ -23,8 +24,8 @@ export default function TaskBar () {
     };
   }, []);
 
-  return <section className={styles['task-bar-container']}>
+  return <section className={styles.taskBarContainer}>
     <WindowButton />
-    <section className={styles['task-area']}>{ time }</section>
+    <section className={styles.taskArea}>{ time }</section>
   </section>;
 }

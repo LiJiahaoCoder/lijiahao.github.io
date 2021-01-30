@@ -1,18 +1,20 @@
 @import "src/style/variables.scss";
 
-.turn-on-container {
+.turnOnContainer {
   position: absolute;
   display: flex;
   width: 100%;
   height: 100vh;
   flex-direction: column;
   z-index: $turn-on-index;
-  .turn-on-border {
+
+  .turnOnBorder {
     flex: 2;
     width: 100%;
     background-color: $turn-on-dark-blue;
   }
-  .turn-on-content {
+
+  .turnOnContent {
     flex: 6;
     width: 100%;
     color: $color-white;
@@ -20,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .welcome-text {
+    .welcomeText {
       font-size: 40px;
     }
   }

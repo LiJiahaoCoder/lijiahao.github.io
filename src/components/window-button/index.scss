@@ -1,7 +1,7 @@
 @import "src/style/variables.scss";
 
-.windows-button-wrapper {
-  .windows-button {
+.windowsButtonWrapper {
+  .windowsButton {
     position: absolute;
     left: 0;
     top: 0;
@@ -17,7 +17,7 @@
     box-shadow: inset 0px 0px 10px 0px $windows-button-shadow-color;
     transition: background-color .25s;
 
-    &.windows-unhovered-button {
+    &.windowsUnhoveredButton {
       background: radial-gradient($windows-button-light-green-background, $windows-button-dark-green-background);
       opacity: 1;
       transition: opacity .25s;
@@ -26,11 +26,11 @@
       }
     }
 
-    &.windows-hovered-button {
+    &.windowsHoveredButton {
       background: radial-gradient($windows-button-lighter-green-background, $windows-button-light-green-background);
     }
 
-    .windows-icon {
+    .windowsIcon {
       width: 28px;
       height: 28px;
       vertical-align: middle;
@@ -38,7 +38,7 @@
       margin-left: -13px;
     }
 
-    .windows-text {
+    .windowsText {
       user-select: none;
     }
   }

@@ -1,6 +1,6 @@
 @import "src/style/variables.scss";
 
-.windows-panel-container {
+.windowsPanelContainer {
   position: absolute;
   top: -$task-bar-height;
   height: $task-bar-height;
@@ -16,6 +16,7 @@
   -moz-transition: height .25s, top .25s;
   -ms-transition: height .25s, top .25s;
   -o-transition: height .25s, top .25s;
+
   &.hidden {
     top: 0;
     height: 0px;
@@ -24,23 +25,24 @@
     box-shadow: none;
   }
 
-  .panel-item {
+  .panelItem {
     height: 40px;
     line-height: 40px;
     text-align: center;
     cursor: pointer;
+
     &:hover {
       color: $color-dark-gray;
       background-color: $color-gray;
     }
 
-    .panel-item-icon {
+    .panelItemIcon {
       height: 70%;
       vertical-align: middle;
       margin-right: 6px;
     }
 
-    .panel-item-text {
+    .panelItemText {
       color: $color-dark-gray;
       vertical-align: middle;
     }

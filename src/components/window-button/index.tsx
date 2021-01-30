@@ -4,9 +4,9 @@ import WindowsPanel from '~/components/windows-panel';
 
 import styles from './index.scss';
 
-const WINDOWS_BUTTON = 'windows-button';
-const WINDOWS_ICON = 'windows-icon';
-const WINDOWS_TEXT = 'windows-text';
+const WINDOWS_BUTTON = 'windowsButton';
+const WINDOWS_ICON = 'windowsIcon';
+const WINDOWS_TEXT = 'windowsText';
 const WindowsButtonIds: string[] = [ WINDOWS_BUTTON, WINDOWS_ICON, WINDOWS_TEXT ];
 
 export default function WindowButton () {
@@ -35,28 +35,28 @@ export default function WindowButton () {
 
   return <>
     <WindowsPanel hidden={hidden} />
-    <div className={styles['windows-button-wrapper']}>
+    <div className={styles.windowsButtonWrapper}>
       <section
         id={WINDOWS_BUTTON}
-        className={`${styles['windows-button']} ${styles['windows-hovered-button']}`}
+        className={`${styles.windowsButton} ${styles.windowsHoveredButton}`}
       >
         <img
           id={WINDOWS_ICON}
-          className={styles['windows-icon']}
+          className={styles.windowsIcon}
           src={WindowsXpIcon}
         />
-        <i id={WINDOWS_TEXT} className={styles['windows-text']}>开始</i>
+        <i id={WINDOWS_TEXT} className={styles.windowsText}>开始</i>
       </section>
       <section
         id={WINDOWS_BUTTON}
-        className={`${styles['windows-button']} ${styles['windows-unhovered-button']}`}
+        className={`${styles.windowsButton} ${styles.windowsUnhoveredButton}`}
       >
         <img
           id={WINDOWS_ICON}
-          className={styles['windows-icon']}
+          className={styles.windowsIcon}
           src={WindowsXpIcon}
         />
-        <i id={WINDOWS_TEXT} className={styles['windows-text']}>开始</i>
+        <i id={WINDOWS_TEXT} className={styles.windowsText}>开始</i>
       </section>
     </div>
   </>;

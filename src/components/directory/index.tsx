@@ -7,8 +7,8 @@ import {
 import styles from './index.scss';
 
 const DIRECTORY = 'directory';
-const DIRECTORY_ICON = 'directory-icon';
-const DIRECTORY_NAME = 'directory-name';
+const DIRECTORY_ICON = 'directoryIcon';
+const DIRECTORY_NAME = 'directoryName';
 const DirectoryButtonIds: string[] = [ DIRECTORY, DIRECTORY_ICON, DIRECTORY_NAME ];
 
 interface IProps {
@@ -49,13 +49,13 @@ export default function Directory ({ name }: IProps) {
     id={DIRECTORY}
     onClick={handleClickDirectory}
     onDoubleClick={handleDoubleClickDirectory}
-    className={`${styles['directory-wrapper']} ${styles[selectedClass]}`}
+    className={`${styles.directoryWrapper} ${styles[selectedClass]}`}
   >
     <img
       id={DIRECTORY_ICON}
       className={styles.icon}
       src={ selectedClass ? DirectorySelectedIcon : DirectoryIcon}
     />
-    <div id={DIRECTORY_NAME} className={styles['directory-name']}>{ name }</div>
+    <div id={DIRECTORY_NAME} className={styles.directoryName}>{ name }</div>
   </div>;
 }

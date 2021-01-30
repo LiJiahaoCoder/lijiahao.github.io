@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Reload } from '~/assets/icons';
+
 import styles from './index.scss';
 
 interface IProps {
@@ -7,7 +8,7 @@ interface IProps {
 }
 
 export default function WindowsPanel ({ hidden }: IProps) {
-  const [panelClassname, setPanelClassname] = useState(styles['windows-panel-container']);
+  const [panelClassname, setPanelClassname] = useState(styles.windowsPanelContainer);
 
   const handleReload = () => {
     location.reload();
@@ -17,7 +18,7 @@ export default function WindowsPanel ({ hidden }: IProps) {
     const hiddenClassname = hidden ? styles.hidden : '';
     setPanelClassname(
       [
-        styles['windows-panel-container'],
+        styles.windowsPanelContainer,
         hiddenClassname,
       ].join(' '),
     );
@@ -25,11 +26,11 @@ export default function WindowsPanel ({ hidden }: IProps) {
 
   return <div className={panelClassname}>
     <section
-      className={styles['panel-item']}
+      className={styles.panelItem}
       onClick={handleReload}
      >
-      <img className={styles['panel-item-icon']} src={Reload} />
-      <span className={styles['panel-item-text']}>刷新</span>
+      <img className={styles.panelItemIcon} src={Reload} />
+      <span className={styles.panelItemText}>刷新</span>
     </section>
   </div>;
 }
