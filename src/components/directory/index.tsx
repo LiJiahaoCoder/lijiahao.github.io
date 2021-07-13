@@ -9,14 +9,15 @@ import styles from './index.scss';
 const DIRECTORY = 'directory';
 const DIRECTORY_ICON = 'directoryIcon';
 const DIRECTORY_NAME = 'directoryName';
-const DirectoryButtonIds: string[] = [ DIRECTORY, DIRECTORY_ICON, DIRECTORY_NAME ];
 
 interface IProps {
   name: string;
+  onOpenDirectory: (title: string) => void;
 }
 
-export default function Directory ({ name }: IProps) {
+export default function Directory ({ name, onOpenDirectory }: IProps) {
   let DirectoryElements: Array<HTMLElement | EventTarget | null> = [];
+  const ids = [`${DIRECTORY}_${name}`, `${DIRECTORY_ICON}_${name}`, `${DIRECTORY_NAME}_${name}`];
   const [selectedClass, setSelectedClass] = useState('');
 
   const handleClickDirectory = (e: ReactMouseEvent) => {
@@ -27,6 +28,7 @@ export default function Directory ({ name }: IProps) {
   const handleDoubleClickDirectory = (e: ReactMouseEvent) => {
     e.stopPropagation();
     setSelectedClass('');
+    onOpenDirectory(name);
   };
 
   const handleUnselecteDirectory = ({ target }: MouseEvent) => {
@@ -36,7 +38,7 @@ export default function Directory ({ name }: IProps) {
   };
 
   useEffect(() => {
-    DirectoryElements = DirectoryButtonIds.map((id) => document.getElementById(id));
+    DirectoryElements = ids.map((id) => document.getElementById(id));
 
     document.addEventListener('click', handleUnselecteDirectory);
 
@@ -46,16 +48,16 @@ export default function Directory ({ name }: IProps) {
   }, []);
 
   return <div
-    id={DIRECTORY}
+    id={ids[0]}
     onClick={handleClickDirectory}
     onDoubleClick={handleDoubleClickDirectory}
     className={`${styles.directoryWrapper} ${styles[selectedClass]}`}
   >
     <img
-      id={DIRECTORY_ICON}
+      id={ids[1]}
       className={styles.icon}
-      src={ selectedClass ? DirectorySelectedIcon : DirectoryIcon}
+      src={selectedClass ? DirectorySelectedIcon : DirectoryIcon}
     />
-    <div id={DIRECTORY_NAME} className={styles.directoryName}>{ name }</div>
+    <div id={ids[2]} className={styles.directoryName}>{name}</div>
   </div>;
 }

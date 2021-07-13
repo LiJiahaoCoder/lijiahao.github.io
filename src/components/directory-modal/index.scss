@@ -1,0 +1,28 @@
+@import "src/style/variables";
+
+@function taskBarGradient($top-color, $middle-color, $bottom-color) {
+  @return linear-gradient($top-color, 10%, $middle-color, 40%, $bottom-color);
+}
+
+.visible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 96px);
+  width: 100%;
+  z-index: $directory-modal-index;
+  padding: 40px 16px 16px;
+  background-color: $color-white;
+}
+
+.bar {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  position: inherit;
+  top: 0;
+  left: 0;
+  color: $color-white;
+  text-align: center;
+  background: taskBarGradient($task-bar-light-blue, $task-bar-dark-blue, $task-bar-main-blue);
+}

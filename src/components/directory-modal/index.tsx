@@ -1,5 +1,14 @@
 import React from 'react';
 
-export default function DirectoryModal () {
-  return <h1>Hi</h1>;
+import styles from './index.scss';
+
+interface IProps {
+  title: string;
+  visible: boolean;
+}
+
+export default function DirectoryModal ({ title, visible }: IProps) {
+  return <section className={visible ? styles.visible : ''}>
+    <div className={styles.bar}>{title}</div>
+  </section>;
 }
