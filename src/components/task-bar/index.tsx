@@ -24,8 +24,8 @@ export default function TaskBar () {
     };
   }, []);
 
-  return <section className={styles.taskBarContainer}>
+  return <footer className={styles.taskBarContainer}>
     <WindowButton />
-    <section className={styles.taskArea}>{ time }</section>
-  </section>;
+    <section className={styles.taskArea}>{time}</section>
+  </footer>;
 }

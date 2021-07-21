@@ -6,7 +6,7 @@ import './scripts';
 
 export default function App () {
   return <>
-    <TurnOn />
+    {/* <TurnOn /> */}
     <Main />
   </>;
 }

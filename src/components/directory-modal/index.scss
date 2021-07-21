@@ -11,18 +11,40 @@
   height: calc(100vh - 96px);
   width: 100%;
   z-index: $directory-modal-index;
-  padding: 40px 16px 16px;
+  padding: $task-bar-height 16px 16px;
   background-color: $color-white;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .bar {
-  height: 40px;
+  height: $task-bar-height;
   width: 100%;
-  line-height: 40px;
+  line-height: $task-bar-height;
   position: inherit;
   top: 0;
   left: 0;
   color: $color-white;
   text-align: center;
   background: taskBarGradient($task-bar-light-blue, $task-bar-dark-blue, $task-bar-main-blue);
+  user-select: none;
+}
+
+.close {
+  font-size: 32px;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  position: absolute;
+  top: 4px;
+  right: 36px;
+  border-radius: 4px;
+  color: $color-white;
+  background-color: $windows-button-light-green-background;
+
+  &:active {
+    background-color: $windows-button-lighter-green-background;
+  }
 }
