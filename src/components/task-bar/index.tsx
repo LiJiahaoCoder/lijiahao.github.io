@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { AboutMeIcon } from '~/assets/icons';
 import WindowButton from '~/components/window-button';
 
 import styles from './index.scss';
@@ -26,6 +27,13 @@ export default function TaskBar () {
 
   return <footer className={styles.taskBarContainer}>
     <WindowButton />
-    <section className={styles.taskArea}>{time}</section>
+    <section className={styles.taskArea}>
+      <img
+        className={styles.aboutMeIcon}
+        title='关于我'
+        src={AboutMeIcon}
+      />
+      <span className={styles.time}>{time}</span>
+    </section>
   </footer>;
 }

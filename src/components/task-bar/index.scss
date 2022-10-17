@@ -16,6 +16,8 @@
   background: taskBarGradient($task-bar-light-blue, $task-bar-dark-blue, $task-bar-main-blue);
 
   .taskArea {
+    display: flex;
+    align-items: center;
     user-select: none;
     position: absolute;
     right: 134px;
@@ -28,5 +30,11 @@
     font-family: monospace;
     background: taskBarGradient($task-area-light-blue, $task-area-dark-blue, $task-area-main-blue);
     box-shadow: -1px 2px 2px 0px $task-area-border-color;
+
+    .aboutMeIcon {
+      width: 20px;
+      height: 20px;
+      margin: 0 4px;
+    }
   }
 }

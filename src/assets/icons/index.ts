@@ -1,3 +1,4 @@
+import AboutMeIcon from './about-me.png';
 import DirectorySelected from './directory-selected.png';
 import Directory from './directory.png';
 import Reload from './reload.svg';
@@ -8,4 +9,5 @@ export {
   Directory,
   DirectorySelected,
   WindowsXpIcon,
+  AboutMeIcon,
 };
