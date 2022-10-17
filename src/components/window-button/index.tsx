@@ -13,7 +13,7 @@ export default function WindowButton () {
   let WindowsButtonElements: Array<HTMLElement | EventTarget | null> = [];
   const [hidden, setHidden] = useState(true);
 
-  const hiddenWindowsPanel = ({ target }: MouseEvent) => {
+  const hideWindowsPanel = ({ target }: MouseEvent) => {
     if (!WindowsButtonElements.includes(target)) {
       setHidden(true);
     }
@@ -26,10 +26,10 @@ export default function WindowButton () {
   useEffect(() => {
     WindowsButtonElements = WindowsButtonIds.map((id) => document.getElementById(id));
 
-    document.addEventListener('click', hiddenWindowsPanel);
+    document.addEventListener('click', hideWindowsPanel);
 
     return function clear () {
-      document.removeEventListener('click', hiddenWindowsPanel);
+      document.removeEventListener('click', hideWindowsPanel);
     };
   }, []);
 
