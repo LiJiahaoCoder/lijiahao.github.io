@@ -45,7 +45,8 @@
   background-color: $windows-button-light-green-background;
   box-shadow: inset 0px 0px 6px 1px #444;
 
-  &:active {
+  &:hover {
+    cursor: pointer;
     background-color: $windows-button-lighter-green-background;
   }
 }

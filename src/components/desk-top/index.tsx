@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Directory from '~/components/directory';
-import DirectoryModal from '~/components/directory-modal';
+import Modal from '~/components/modal';
 
 import styles from './index.scss';
 
@@ -21,6 +21,6 @@ export default function DeskTop () {
     <section className={`${styles.deskTop} ${styles.background}`}>
       <Directory name='WebGL基础' onOpenDirectory={onOpenDirectory} />
     </section>
-    <DirectoryModal visible={visible} title={title} onClose={onCloseDirectory} />
+    <Modal visible={visible} title={title} onClose={onCloseDirectory} />
   </>;
 }
