@@ -13,14 +13,16 @@ export default function DeskTop () {
     setTitle(_title);
   };
 
-  const onCloseDirectory = () => {
-    setVisible(false);
-  };
-
   return <>
     <section className={`${styles.deskTop} ${styles.background}`}>
       <Directory name='WebGL基础' onOpenDirectory={onOpenDirectory} />
     </section>
-    <Modal visible={visible} title={title} onClose={onCloseDirectory} />
+    <Modal
+      visible={visible}
+      title={title}
+      onClose={() => {
+        setVisible(false);
+      }}
+    />
   </>;
 }

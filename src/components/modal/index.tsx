@@ -1,11 +1,11 @@
-import React, { ReactChildren } from 'react';
+import React, { ReactNode } from 'react';
 
 import styles from './index.scss';
 
 interface IProps {
   title: string;
   visible: boolean;
-  children: ReactChildren;
+  children?: ReactNode;
   onClose: () => void;
 }
 

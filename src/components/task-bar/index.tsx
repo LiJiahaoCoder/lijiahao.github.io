@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import AboutMe from '~/articles/about-me.md';
 import { AboutMeIcon } from '~/assets/icons';
+import Modal from '~/components/modal';
 import WindowButton from '~/components/window-button';
 
 import styles from './index.scss';
 
 export default function TaskBar () {
-  const [time, setTime] = useState<string>('');
-  const [timer, setTimer] = useState<number>(0);
+  const [time, setTime] = useState('');
+  const [timer, setTimer] = useState(0);
+  const [visible, setVisible] = useState(false);
 
   const getCurrentTime = (): string => {
     return new Date().toLocaleString().split(', ')[1];
@@ -25,15 +29,29 @@ export default function TaskBar () {
     };
   }, []);
 
-  return <footer className={styles.taskBarContainer}>
-    <WindowButton />
-    <section className={styles.taskArea}>
-      <img
-        className={styles.aboutMeIcon}
-        title='关于我'
-        src={AboutMeIcon}
-      />
-      <span className={styles.time}>{time}</span>
-    </section>
-  </footer>;
+  return <>
+    <footer className={styles.taskBarContainer}>
+      <WindowButton />
+      <section className={styles.taskArea}>
+        <img
+          className={styles.aboutMeIcon}
+          title='关于我'
+          src={AboutMeIcon}
+          onClick={() => {
+            setVisible(true);
+          }}
+        />
+        <span className={styles.time}>{time}</span>
+      </section>
+    </footer>
+    <Modal
+      visible={visible}
+      title='关于我'
+      onClose={() => {
+        setVisible(false);
+      }}
+    >
+      <ReactMarkdown children={AboutMe} />
+    </Modal>
+  </>;
 }
