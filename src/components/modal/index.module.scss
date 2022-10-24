@@ -8,10 +8,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
   height: calc(100vh - 96px);
   width: 100%;
   z-index: $directory-modal-index;
   padding: $task-bar-height 16px 16px;
+  overflow-y: auto;
   background-color: $color-white;
 }
 
@@ -30,6 +33,12 @@
   text-align: center;
   background: taskBarGradient($task-bar-light-blue, $task-bar-dark-blue, $task-bar-main-blue);
   user-select: none;
+}
+
+.content {
+  flex: 1;
+  padding-top: 16px;
+  overflow-y: scroll;
 }
 
 .close {

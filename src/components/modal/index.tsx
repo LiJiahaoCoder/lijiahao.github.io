@@ -20,6 +20,8 @@ export default function Modal ({
       {title}
       <div className={styles.close} onClick={onClose}>×</div>
     </header>
-    { children }
+    <main className={styles.content}>
+      { children }
+    </main>
   </div>;
 }

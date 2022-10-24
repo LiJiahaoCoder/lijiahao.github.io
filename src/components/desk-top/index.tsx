@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Directory from '../../components/directory';
-import Modal from '../../components/modal';
+import Directory from '../directory';
+import Modal from '../modal';
 
 import styles from './index.module.scss';
 
