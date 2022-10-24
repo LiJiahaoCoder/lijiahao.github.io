@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import AboutMe from '~/articles/about-me.md';
-import { AboutMeIcon } from '~/assets/icons';
-import Modal from '~/components/modal';
-import WindowButton from '~/components/window-button';
+import AboutMe from '../../articles/about-me.md';
+import { AboutMeIcon } from '../../assets/icons';
+import Modal from '../../components/modal';
+import WindowButton from '../../components/window-button';
 
-import styles from './index.scss';
+import styles from './index.module.scss';
 
 export default function TaskBar () {
   const [time, setTime] = useState('');
@@ -51,7 +51,9 @@ export default function TaskBar () {
         setVisible(false);
       }}
     >
-      <ReactMarkdown children={AboutMe} />
+      <main className={styles.markdownContainer}>
+        <ReactMarkdown children={AboutMe} />
+      </main>
     </Modal>
   </>;
 }

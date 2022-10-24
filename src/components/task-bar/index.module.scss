@@ -21,7 +21,7 @@
     user-select: none;
     position: absolute;
     right: 134px;
-    width: 120px;
+    width: 130px;
     height: $task-bar-height;
     line-height: $task-bar-height;
     text-align: center;
@@ -37,4 +37,8 @@
       margin: 0 4px;
     }
   }
+}
+
+.markdownContainer {
+  padding: 16px 0;
 }

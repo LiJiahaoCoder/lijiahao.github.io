@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import ctx from '~/context';
+import ctx from '../context';
 import DeskTop from './desk-top';
 import TaskBar from './task-bar';
 

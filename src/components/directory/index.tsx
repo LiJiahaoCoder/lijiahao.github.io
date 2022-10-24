@@ -2,9 +2,9 @@ import React, { useEffect, useState, MouseEvent as ReactMouseEvent } from 'react
 import {
   Directory as DirectoryIcon,
   DirectorySelected as DirectorySelectedIcon,
-} from '~/assets/icons';
+} from '../../assets/icons';
 
-import styles from './index.scss';
+import styles from './index.module.scss';
 
 const DIRECTORY = 'directory';
 const DIRECTORY_ICON = 'directoryIcon';

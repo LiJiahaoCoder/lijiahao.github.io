@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "target": "ESNext",
     "module": "commonjs",
     "allowJs": true,
@@ -12,18 +12,8 @@
     "strict": true,
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "paths": {
-      "~/*": ["./*"]
-    }
+    "typeRoots": ["node_modules/@types"]
   },
-  "include": [
-    "src/**/*",
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

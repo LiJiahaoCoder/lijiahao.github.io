@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Directory from '~/components/directory';
-import Modal from '~/components/modal';
+import Directory from '../../components/directory';
+import Modal from '../../components/modal';
 
-import styles from './index.scss';
+import styles from './index.module.scss';
 
 export default function DeskTop () {
   const [visible, setVisible] = useState(false);
