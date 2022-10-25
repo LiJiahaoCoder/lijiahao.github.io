@@ -3,4 +3,12 @@
     line-height: 1.5;
     margin-bottom: 8px;
   }
+
+  & > blockquote {
+    padding: 4px 0 4px 8px;
+    margin-bottom: 8px;
+    color: gray;
+    background-color: rgba(0, 0, 0, .1);
+    border-left: 4px solid gray;
+  }
 }
