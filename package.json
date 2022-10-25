@@ -5,7 +5,7 @@
   "homepage": "lijiahao.github.io",
   "scripts": {
     "clean": "rm -rf dist/ .parcel-cache/ build/",
-    "start": "yarn clean && parcel src/index.html",
+    "start": "yarn clean && parcel --dist-dir build/ src/index.html",
     "build": "yarn clean && parcel build --no-source-maps src/index.html --public-url ./ --dist-dir build/ && cp CNAME ./build",
     "lint": "tslint --config tslint.json 'src/**/*.ts(x)?'",
     "lint:fix": "tslint --config tslint.json 'src/**/*.ts(x)?' --fix",
