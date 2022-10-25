@@ -1,6 +1,6 @@
 *Hallo*🙋我叫*易安*（社区的小伙伴都喊我*牛牛*），目前就职于 [*thoughtworks*](https://www.thoughtworks.com/)。
 
-🧑‍💻我是一名*前端开发工程师*，同时也是*成都fCC社区*的一员。
+🧑‍💻我是一名*前端开发工程师*，同时也是[*成都fCC社区*](https://fcc-cd.dev/)的一员（[*了解什么是fCC*](https://github.com/freeCodeCamp/freeCodeCamp)）。
 
 ## 🌊经历
 
@@ -13,12 +13,18 @@
 
 1. thoughtworks，前端开发工程师 — 2019-至今
 
+### 🍄社区活动
+
+1. 参与组织举办 [*2019成都Web全栈大会*](https://web-conf.dev/#2019/)
+2. 参与组织举办 [*COSCon'20中国开源年会成都会场*](https://fcc-cd.dev/activity/conference/coscon-2020-chengdu/)
+3. 参与组织举办 [*COSCon'21中国开源年会成都会场*](https://fcc-cd.dev/activity/conference/coscon-2021-chengdu/)
+
 ## ☎️社交平台
 
 1. GitHub — [*LiJiahaoCoder*](https://github.com/LiJiahaoCoder)
-2. 个人公众号（啥都发，也发红包） — Refactor
-3. 知乎 — [*易安*](https://www.zhihu.com/people/li-jia-hao-32-2)
-4. 掘金 — [*Thoughtful valiant.*](https://juejin.cn/user/3825956194095597)
+2. 知乎 — [*易安*](https://www.zhihu.com/people/li-jia-hao-32-2)
+3. 掘金 — [*Thoughtful valiant.*](https://juejin.cn/user/3825956194095597)
+4. 个人公众号（啥都发，包括红包） — Refactor
 
 ## 🍟爱好
 
