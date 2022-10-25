@@ -4,7 +4,7 @@ import {
   DirectorySelected as DirectorySelectedIcon,
 } from '../../assets/icons';
 
-import styles from './index.module.scss';
+import * as styles from './index.module.scss';
 
 const DIRECTORY = 'directory';
 const DIRECTORY_ICON = 'directoryIcon';

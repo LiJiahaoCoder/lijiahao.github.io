@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import styles from './index.module.scss';
+import * as styles from './index.module.scss';
 
 interface IProps {
   children: string;

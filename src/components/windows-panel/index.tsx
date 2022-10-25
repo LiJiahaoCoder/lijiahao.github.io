@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Reload } from '../../assets/icons';
 
-import styles from './index.module.scss';
+import * as styles from './index.module.scss';
 
 interface IProps {
   hidden: boolean;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { WindowsXpIcon } from '../../assets/icons';
 import WindowsPanel from '../windows-panel';
 
-import styles from './index.module.scss';
+import * as styles from './index.module.scss';
 
 const WINDOWS_BUTTON = 'windowsButton';
 const WINDOWS_ICON = 'windowsIcon';

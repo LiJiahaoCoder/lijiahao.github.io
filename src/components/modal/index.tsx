@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-import styles from './index.module.scss';
+import * as styles from './index.module.scss';
 
 interface IProps {
   title: string;

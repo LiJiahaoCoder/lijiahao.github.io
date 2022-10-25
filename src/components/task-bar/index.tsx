@@ -5,7 +5,7 @@ import Markdown from '../markdown';
 import Modal from '../modal';
 import WindowButton from '../window-button';
 
-import styles from './index.module.scss';
+import * as styles from './index.module.scss';
 
 export default function TaskBar () {
   const [time, setTime] = useState('');
@@ -41,7 +41,7 @@ export default function TaskBar () {
             setVisible(true);
           }}
         />
-        <span className={styles.time}>{time}</span>
+        <span>{time}</span>
       </section>
     </footer>
     <Modal
