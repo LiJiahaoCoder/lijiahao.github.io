@@ -15,6 +15,11 @@
       color: gray;
       margin-bottom: 0;
     }
+
+    & > img {
+      width: auto;
+      max-width: 100%;
+    }
   }
 
   & > ol,
