@@ -1,28 +1,67 @@
 import React, { useState } from 'react';
+import articles from '../../articles';
+import { TitleKey } from '../../typings/articles';
 import Directory from '../directory';
+import File from '../file';
+import Markdown from '../markdown';
 import Modal from '../modal';
 
 import * as styles from './index.module.scss';
 
 export default function DeskTop () {
-  const [visible, setVisible] = useState(false);
-  const [title, setTitle] = useState('');
+  const [directoryModalVisible, setDirectoryModalVisible] = useState(false);
+  const [directoryModalTitle, setDirectoryModalTitle] = useState<TitleKey>('WebGL基础');
+  const [fileModalVisible, setFileModalVisible] = useState(false);
+  const [fileModalTitle, setFileModalTitle] = useState('');
 
-  const onOpenDirectory = (_title: string) => {
-    setVisible(true);
-    setTitle(_title);
+  const handleOpenDirectory = (title: TitleKey) => {
+    setDirectoryModalVisible(true);
+    setDirectoryModalTitle(title);
+  };
+
+  const handleOpenFile = (title: string) => {
+    setFileModalTitle(title);
+    setFileModalVisible(true);
   };
 
   return <>
     <section className={`${styles.deskTop} ${styles.background}`}>
-      <Directory name='WebGL基础' onOpenDirectory={onOpenDirectory} />
+      <Directory name='WebGL基础' onOpenDirectory={handleOpenDirectory} />
+      <Directory name='ThreeJS' onOpenDirectory={handleOpenDirectory} />
+      <Directory name='技术闲谈' onOpenDirectory={handleOpenDirectory} />
     </section>
     <Modal
-      visible={visible}
-      title={title}
+      visible={directoryModalVisible}
+      title={directoryModalTitle}
       onClose={() => {
-        setVisible(false);
+        setDirectoryModalVisible(false);
       }}
-    />
+    >
+      {
+        articles[directoryModalTitle].map(({ title }) => (
+          <File
+            key={ title }
+            name={ title }
+            onOpenFile={handleOpenFile}
+          />
+        ))
+      }
+    </Modal>
+    <Modal
+      visible={fileModalVisible}
+      title={fileModalTitle}
+      onClose={() => {
+        setFileModalVisible(false);
+      }}
+    >
+      <Markdown
+        children={articles[
+          directoryModalTitle
+        ].find(
+          ({ title }) => title === fileModalTitle,
+          )?.content ?? '空'
+        }
+      />
+    </Modal>
   </>;
 }

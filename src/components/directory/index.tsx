@@ -3,6 +3,7 @@ import {
   Directory as DirectoryIcon,
   DirectorySelected as DirectorySelectedIcon,
 } from '../../assets/icons';
+import { TitleKey } from '../../typings/articles';
 
 import * as styles from './index.module.scss';
 
@@ -11,8 +12,8 @@ const DIRECTORY_ICON = 'directoryIcon';
 const DIRECTORY_NAME = 'directoryName';
 
 interface IProps {
-  name: string;
-  onOpenDirectory: (title: string) => void;
+  name: TitleKey;
+  onOpenDirectory: (title: TitleKey) => void;
 }
 
 export default function Directory ({ name, onOpenDirectory }: IProps) {

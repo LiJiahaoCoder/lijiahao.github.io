@@ -1,4 +1,4 @@
-*Hallo*🙋我叫*易安*（社区的小伙伴都喊我*牛牛*），目前就职于 [*thoughtworks*](https://www.thoughtworks.com/)。
+*Hallo*🙋我叫*易安*（社区的小伙伴都喊我*牛牛*），目前就职于 *thoughtworks*。
 
 🧑‍💻我是一名*前端开发工程师*，同时也是[*成都fCC社区*](https://fcc-cd.dev/)的一员（[*了解什么是fCC*](https://github.com/freeCodeCamp/freeCodeCamp)）。
 
@@ -11,7 +11,7 @@
 
 ### 👷‍♂️工作经历
 
-1. thoughtworks，前端开发工程师 — 2019-至今
+1. [*thoughtworks*](https://www.thoughtworks.com/)，前端开发工程师 — 2019-至今
 
 ### 🍄社区活动
 

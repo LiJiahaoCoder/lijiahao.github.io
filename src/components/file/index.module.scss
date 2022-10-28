@@ -1,0 +1,20 @@
+.file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  margin: 0 16px 16px 0;
+
+  .icon {
+    width: 48px;
+  }
+
+  .title {
+    width: 100%;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 1px;
+  }
+}

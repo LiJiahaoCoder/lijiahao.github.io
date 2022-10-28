@@ -1,4 +1,7 @@
 .markdown {
+  width: 60%;
+  margin: 0 auto;
+
   & > h2,
   & > h3 {
     margin-bottom: 8px;
@@ -7,6 +10,11 @@
   & > p {
     line-height: 1.5;
     margin-bottom: 8px;
+
+    &:last-child {
+      color: gray;
+      margin-bottom: 0;
+    }
   }
 
   & > ol,
