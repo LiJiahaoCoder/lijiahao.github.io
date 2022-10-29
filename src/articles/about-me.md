@@ -6,25 +6,25 @@
 
 ### 👨‍🎓教育经历
 
-1. 成都信息工程大学，数字媒体技术专业，2015-2019 — 本科
-2. 新加坡国立大学，2D游戏引擎开发，2017 — 交流学习
+* [1] 成都信息工程大学，数字媒体技术专业，2015-2019 — 本科
+* [2] 新加坡国立大学，2D游戏引擎开发，2017 — 交流学习
 
 ### 👷‍♂️工作经历
 
-1. [*thoughtworks*](https://www.thoughtworks.com/)，前端开发工程师 — 2019-至今
+* [1] [*thoughtworks*](https://www.thoughtworks.com/)，前端开发工程师 — 2019-至今
 
 ### 🍄社区活动
 
-1. 参与组织举办 [*2019成都Web全栈大会*](https://web-conf.dev/#2019/)
-2. 参与组织举办 [*COSCon'20中国开源年会成都会场*](https://fcc-cd.dev/activity/conference/coscon-2020-chengdu/)
-3. 参与组织举办 [*COSCon'21中国开源年会成都会场*](https://fcc-cd.dev/activity/conference/coscon-2021-chengdu/)
+* [1] 参与组织举办 [*2019成都Web全栈大会*](https://web-conf.dev/#2019/)
+* [2] 参与组织举办 [*COSCon'20中国开源年会成都会场*](https://fcc-cd.dev/activity/conference/coscon-2020-chengdu/)
+* [3] 参与组织举办 [*COSCon'21中国开源年会成都会场*](https://fcc-cd.dev/activity/conference/coscon-2021-chengdu/)
 
 ## ☎️社交平台
 
-1. GitHub — [*LiJiahaoCoder*](https://github.com/LiJiahaoCoder)
-2. 知乎 — [*易安*](https://www.zhihu.com/people/li-jia-hao-32-2)
-3. 掘金 — [*Thoughtful valiant.*](https://juejin.cn/user/3825956194095597)
-4. 个人公众号（啥都发，包括红包） — Refactor
+* [1] GitHub — [*LiJiahaoCoder*](https://github.com/LiJiahaoCoder)
+* [2] 知乎 — [*易安*](https://www.zhihu.com/people/li-jia-hao-32-2)
+* [3] 掘金 — [*Thoughtful valiant.*](https://juejin.cn/user/3825956194095597)
+* [4] 个人公众号（啥都发，包括红包） — Refactor
 
 ## 🍟爱好
 
