@@ -27,6 +27,15 @@
     margin-bottom: 8px;
   }
 
+  & > table {
+    border: 1px solid;
+
+    th,
+    td {
+      border: 1px solid;
+    }
+  }
+
   & > blockquote {
     padding: 4px 0 4px 8px;
     margin-bottom: 8px;
