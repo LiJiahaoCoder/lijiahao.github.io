@@ -1,5 +1,6 @@
 import WebGLCoordinate from './webgl-coordinate.md';
 import WebGLStart from './webgl-start.md';
+import WebGLTransformPractice from './webgl-transform-practice.md';
 import WebGLTransform from './webgl-transform.md';
 import WebGLTriangle from './webgl-triangle.md';
 import WhatIsWebGL from './what-is-webgl.md';
@@ -10,4 +11,5 @@ export default [
   { title: '这个三角形，像极了我的前半生！', content: WebGLTriangle },
   { title: '客官，进来看看图形的几何变换？', content: WebGLTransform },
   { title: 'WebGL 坐标系统', content: WebGLCoordinate },
+  { title: 'WebGL 简单的图形变换！', content: WebGLTransformPractice },
 ];
