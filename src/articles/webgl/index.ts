@@ -3,6 +3,7 @@ import WebGLStart from './webgl-start.md';
 import WebGLTransformPractice from './webgl-transform-practice.md';
 import WebGLTransform from './webgl-transform.md';
 import WebGLTriangle from './webgl-triangle.md';
+import WebGLVariableInsert from './webgl-variable-insert.md';
 import WhatIsWebGL from './what-is-webgl.md';
 
 export default [
@@ -12,4 +13,5 @@ export default [
   { title: '客官，进来看看图形的几何变换？', content: WebGLTransform },
   { title: 'WebGL 坐标系统', content: WebGLCoordinate },
   { title: 'WebGL 简单的图形变换！', content: WebGLTransformPractice },
+  { title: 'WebGL 变量的内插过程', content: WebGLVariableInsert },
 ];
