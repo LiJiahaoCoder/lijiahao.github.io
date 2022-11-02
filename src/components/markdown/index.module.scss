@@ -35,6 +35,7 @@
 
   & > table {
     border: 1px solid;
+    margin-bottom: 8px;
 
     th,
     td {
@@ -51,6 +52,9 @@
   }
 
   & > pre {
+    padding: 8px;
     margin-bottom: 8px;
+    background-color: ghostwhite;
+    overflow-x: auto;
   }
 }
