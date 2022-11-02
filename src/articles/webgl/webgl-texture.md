@@ -136,11 +136,11 @@ function loadTexture (gl, n, u_Sampler, image) {
 
 *initTexture* 函数中应该比较好理解，下面将直接介绍 *loadTexture* 函数。首先在我们的WebGL系统中有8个纹理单元分别是 *gl.TEXTURE0* 到 *gl.TEXTURE7*，这每一个纹理单元都与 *gl.TEXTURE_2D* 相关联，而后者就是绑定纹理时的纹理目标：
 
-![texture-unit](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-texture/texture-unit.png)
+![texture-unit](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-texture/texture-unit.jpeg)
 
 当调用 *gl.createTexture* 后，WebGL系统中就会存在一个纹理对象：
 
-![texture-unit-created](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-texture/texture-unit-created.png)
+![texture-unit-created](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-texture/texture-unit-created.jpeg)
 
 #### 坐标轴翻转
 
@@ -151,8 +151,8 @@ function loadTexture (gl, n, u_Sampler, image) {
 | gl.PACK_ALIGNMENT | Packing of pixel data into memory | GLint | 4 | 1, 2, 4, 8 | OpenGL ES 2.0 |
 | gl.UNPACK_ALIGNMENT | Unpacking of pixel data from memory. | GLint | 4 | 1, 2, 4, 8 | OpenGL ES 2.0 |
 | gl.UNPACK_FLIP_Y_WEBGL | 如果为true，则把图片上下对称翻转坐标轴(图片本身不变)。 | GLboolean | false | true, false | WebGL |
-| gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL | Multiplies the alpha channel into the other color channels. | GLboolean | false | true, false | WebGL |
-| PACK_COLORSPACE_CONVERSION_WEBGL | Default color space conversion or no color space conversion. | GLenum | gl.BROWSER_DEFAULT_WEBGL | gl.BROWSER_DEFAULT_WEBGL,gl.NONE | WebGL |
+| gl.UNPACK_PREMULTIPLY_ ALPHA_WEBGL | Multiplies the alpha channel into the other color channels. | GLboolean | false | true, false | WebGL |
+| gl. PACK_COLORSPACE_ CONVERSION_WEBGL | Default color space conversion or no color space conversion. | GLenum | gl.BROWSER_DEFAULT_WEBGL | gl.BROWSER_DEFAULT_WEBGL, gl.NONE | WebGL |
 
 WebGL中的纹理坐标系统的t轴方向与PNG/BMP/JPG等格式图片的坐标系统的y轴方向是相反的。所以只有先将图像的y轴进行反转，才能将图像正确地映射到图形上：
 
@@ -164,13 +164,13 @@ WebGL通过一种叫做纹理单元的机制来同时使用多个纹理。每个
 
 在使用纹理单元之前，需要调用 *gl.activeTexture(gl.TEXTURE0)* 来激活它（下图中激活的是 *TEXTURE0*）：
 
-![texture-unit-active](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-texture/texture-unit-active.png)
+![texture-unit-active](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-texture/texture-unit-active.jpeg)
 
 #### 绑定纹理对象
 
 接下来，我们还要告诉WebGL系统纹理对象使用的是哪种类型的纹理。在对纹理对象操作之前，我们需要绑定纹理对象，这里会发现这一系列的操作和缓冲区很相似：在对缓冲区对象进行操作之前，也需要绑定缓冲区对象。WebGL支持两种类型的纹理：*gl.TEXTURE_2D和gl.TEXTURE_CUBE_MAP*，分别为二维纹理和立方体纹理。当调用 *gl.bindTexture* 后：
 
-![texture-unit-bind](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-texture/texture-unit-bind.png)
+![texture-unit-bind](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-texture/texture-unit-bind.jpeg)
 
 这样我们就指定了纹理对象的类型（*gl.TEXTURE_2D*）。
 
@@ -181,9 +181,9 @@ WebGL通过一种叫做纹理单元的机制来同时使用多个纹理。每个
 | pname | 描述 | 参数 |
 | :- | :- | :- |
 | *gl.TEXTURE_MAG_FILTER* | 纹理放大滤波器 | *gl.LINEAR(默认值),gl.NEAREST* |
-| *gl.TEXTURE_MIN_FILTER* | 纹理缩小滤波器 | *gl.LINEAR,gl.NEAREST,gl.NEAREST_MIPMAP_NEAREST,gl.LINEAR_MIPMAP_NEAREST,gl.NEAREST_MIPMAP_LINEAR(默认值),gl.LINEAR_MIPMAP_LINEAR* |
-| *gl.TEXTURE_WRAP_S* | 纹理坐标水平填充 s | *gl.REPEAT(默认值),gl.CLAMP_TO_EDGE,gl.MIRRORED_REPEAT* |
-| *gl.TEXTURE_WRAP_T* | 纹理坐标垂直填充 t | *gl.REPEAT(默认值),gl.CLAMP_TO_EDGE,gl.MIRRORED_REPEAT* |
+| *gl.TEXTURE_MIN_FILTER* | 纹理缩小滤波器 | *gl.LINEAR,gl.NEAREST, gl.NEAREST_MIPMAP_NEAREST, gl.LINEAR_MIPMAP_NEAREST, gl.NEAREST_MIPMAP_LINEAR(默认值), gl.LINEAR_MIPMAP_LINEAR* |
+| *gl.TEXTURE_WRAP_S* | 纹理坐标水平填充 s | *gl.REPEAT(默认值), gl.CLAMP_TO_EDGE, gl.MIRRORED_REPEAT* |
+| *gl.TEXTURE_WRAP_T* | 纹理坐标垂直填充 t | *gl.REPEAT(默认值), gl.CLAMP_TO_EDGE, gl.MIRRORED_REPEAT* |
 
 *gl.TEXTURE_MAG_FILTER 和 gl.TEXTURE_MIN_FILTER* 的非金字塔纹理类型常量：
 

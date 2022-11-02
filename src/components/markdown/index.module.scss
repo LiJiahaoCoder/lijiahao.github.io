@@ -40,6 +40,11 @@
     th,
     td {
       border: 1px solid;
+      padding: 4px;
+    }
+
+    & > thead > th {
+      white-space: nowrap;
     }
   }
 
