@@ -1,6 +1,7 @@
 import WebGLCoordinate from './webgl-coordinate.md';
 import WebGLGlslEsBasicGrammar from './webgl-glsl-es-basic-grammar.md';
 import WebGLStart from './webgl-start.md';
+import WebGLTexture from './webgl-texture.md';
 import WebGLTransformPractice from './webgl-transform-practice.md';
 import WebGLTransform from './webgl-transform.md';
 import WebGLTriangle from './webgl-triangle.md';
@@ -16,4 +17,5 @@ export default [
   { title: 'WebGL 简单的图形变换！', content: WebGLTransformPractice },
   { title: 'WebGL 变量的内插过程', content: WebGLVariableInsert },
   { title: 'WebGL GLSL ES语法基础', content: WebGLGlslEsBasicGrammar },
+  { title: 'WebGL 纹理映射', content: WebGLTexture },
 ];
