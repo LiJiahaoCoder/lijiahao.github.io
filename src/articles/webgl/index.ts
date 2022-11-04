@@ -1,3 +1,4 @@
+import WebGL3D from './webgl-3d.md';
 import WebGLCoordinate from './webgl-coordinate.md';
 import WebGLGlslEsBasicGrammar from './webgl-glsl-es-basic-grammar.md';
 import WebGLStart from './webgl-start.md';
@@ -18,4 +19,5 @@ export default [
   { title: 'WebGL 变量的内插过程', content: WebGLVariableInsert },
   { title: 'WebGL GLSL ES语法基础', content: WebGLGlslEsBasicGrammar },
   { title: 'WebGL 纹理映射', content: WebGLTexture },
+  { title: 'WebGL 进入三维的世界', content: WebGL3D },
 ];

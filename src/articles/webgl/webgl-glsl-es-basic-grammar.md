@@ -4,7 +4,7 @@ GLSL ES编程语言是在OpenGL的着色器语言（GLSL）的基础上，删除
 
 说了这么久的WebGL，也该提一下他的主人Khronos了：
 
-![khronos](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-glsl-es-basic-grammer/khronos.png)
+![khronos](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-glsl-es-basic-grammar/khronos.png)
 
 Khronos是一个专注于指定开放标准的行业协会，重点指定免费的API，使在各种平台和设备上创作或播放的多媒体可以得到硬件加速。大名鼎鼎的OpenGL、OpenGL ES、WebGL都是由该组织指定的标准，了解更多可见官网：[https://www.khronos.org/](https://www.khronos.org/)。
 
@@ -101,7 +101,7 @@ fresult = bool(fnumber);    // 整型转换为布尔型，0.0转为false，其�
 |  | bvec2/bvec3/bvec4 | 具有2、3、4个布尔型元素的矢量 |
 |  | mat2/mat3/mat4 | 2x2、3x3、4x4的浮点数元素矩阵 |
 
-![vector](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-glsl-es-basic-grammer/vector.png)
+![vector](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-glsl-es-basic-grammar/vector.png)
 
 #### 矢量构造函数
 
@@ -129,7 +129,7 @@ mat4 m4 = mat4(1.0, 2.0, 3.0, 4.0,
 
 上面构造的 *4 x 4* 矩阵对应的其实是：
 
-![4x4-matrix](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-glsl-es-basic-grammer/4x4-matrix.png)
+![4x4-matrix](https://raw.githubusercontent.com/LiJiahaoCoder/lijiahao.github.io/master/src/assets/articles/webgl/webgl-glsl-es-basic-grammar/4x4-matrix.png)
 
 ##### 方式二
 
