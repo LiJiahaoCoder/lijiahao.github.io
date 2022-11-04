@@ -1,0 +1,10 @@
+.filesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import articles from '../../articles';
 import { TitleKey } from '../../typings/articles';
 import Directory from '../directory';
-import File from '../file';
+import Files from '../files';
 import Markdown from '../markdown';
 import Modal from '../modal';
 
@@ -37,15 +37,10 @@ export default function DeskTop () {
         setDirectoryModalVisible(false);
       }}
     >
-      {
-        articles[directoryModalTitle].map(({ title }) => (
-          <File
-            key={ title }
-            name={ title }
-            onOpenFile={handleOpenFile}
-          />
-        ))
-      }
+      <Files
+        files={ articles[directoryModalTitle] }
+        onOpenFile={ handleOpenFile }
+      />
     </Modal>
     <Modal
       visible={fileModalVisible}

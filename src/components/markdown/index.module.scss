@@ -3,6 +3,12 @@
 .markdown {
   width: 60%;
   margin: 0 auto;
+  height: 100%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   & > h2,
   & > h3 {
