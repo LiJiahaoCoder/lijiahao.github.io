@@ -1,4 +1,5 @@
 import WebGL3D from './webgl-3d.md';
+import WebGLColorAndImage from './webgl-color-and-image.md';
 import WebGLCoordinate from './webgl-coordinate.md';
 import WebGLGlslEsBasicGrammar from './webgl-glsl-es-basic-grammar.md';
 import WebGLLight from './webgl-light.md';
@@ -26,4 +27,5 @@ export default [
   { title: 'WebGL 光照', content: WebGLLight },
   { title: 'WebGL 阴影', content: WebGLShadow },
   { title: 'WebGL 说点高级的东西', content: WebGLSomethingInteresting },
+  { title: 'WebGL 颜色与图像', content: WebGLColorAndImage },
 ];
