@@ -3,6 +3,7 @@ import WebGLCoordinate from './webgl-coordinate.md';
 import WebGLGlslEsBasicGrammar from './webgl-glsl-es-basic-grammar.md';
 import WebGLLight from './webgl-light.md';
 import WebGLShadow from './webgl-shadow.md';
+import WebGLSomethingInteresting from './webgl-something-interesting.md';
 import WebGLStart from './webgl-start.md';
 import WebGLTexture from './webgl-texture.md';
 import WebGLTransformPractice from './webgl-transform-practice.md';
@@ -24,4 +25,5 @@ export default [
   { title: 'WebGL 进入三维的世界', content: WebGL3D },
   { title: 'WebGL 光照', content: WebGLLight },
   { title: 'WebGL 阴影', content: WebGLShadow },
+  { title: 'WebGL 说点高级的东西', content: WebGLSomethingInteresting },
 ];
